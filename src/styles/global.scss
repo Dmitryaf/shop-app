@@ -1,0 +1,22 @@
+@import 'variables';
+@import 'fonts';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: Montserrat,
+    Arial,
+    sans-serif;
+  font-size: 16px;
+  color: $blueDark;
+}
+
+.container {
+  max-width: 850px;
+  padding: 0 15px;
+  margin: 200px auto;
+}

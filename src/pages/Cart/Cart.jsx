@@ -1,6 +1,9 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { NavLink } from "react-router-dom";
+
+import { getCardType } from "../../api/api";
+import CardBank from "../../components/BankCard/CardBank";
 
 import "./Cart.scss";
 
@@ -15,6 +18,11 @@ function Cart() {
         <NavLink to="/catalog" className="nav-link">
           Catalog
         </NavLink>
+      </div>
+      <div className="card__content">
+        <div className="cart__bank">
+          <CardBank />
+        </div>
       </div>
     </div>
   );

@@ -1,4 +1,5 @@
 const SET_DATA = "SET_DATA";
+const SET_CARD_TYPE = "SET_CARD_TYPE";
 const ADD_TO_CART = "ADD_TO_DESTRUCTION_CART";
 const DELETE_FROM_CART = "DELETE_FROM_DESTRUCTION_CART";
 const TOGGLE_IS_FETCHING = "TOGGLE_IS_FETCHING";
@@ -6,6 +7,7 @@ const TOGGLE_IS_FETCHING = "TOGGLE_IS_FETCHING";
 const initialState = {
   data: [],
   cart: [],
+  cardType: {},
   isFetching: true,
 };
 
@@ -18,6 +20,12 @@ export default function dataReducer(state = initialState, action) {
       return {
         ...state,
         data: action.payload,
+      };
+
+    case SET_CARD_TYPE:
+      return {
+        ...state,
+        cardType: action.payload,
       };
 
     case ADD_TO_CART:
@@ -46,6 +54,8 @@ export default function dataReducer(state = initialState, action) {
 }
 
 export const setData = (data) => ({ type: SET_DATA, payload: data });
+
+export const setCardType = (dataType) => ({ type: SET_CARD_TYPE, payload: dataType });
 
 export const addToCart = (id) => ({
   type: ADD_TO_CART,

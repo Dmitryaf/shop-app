@@ -6,7 +6,6 @@ import "./Product.scss";
 
 function Product(props) {
   const dispatch = useDispatch();
-  const cart = useSelector((state) => state.dataReducer.cart);
 
   const { data } = props;
   const { gameID: id, title, normalPrice: price, thumb: img } = data;

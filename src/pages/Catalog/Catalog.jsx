@@ -4,7 +4,7 @@ import { NavLink } from "react-router-dom";
 
 import Product from "../../components/Product/Product";
 import Preloader from "../../components/common/Preloader/Preloader";
-import getApiData from "../../api/api";
+import { getApiData } from "../../api/api";
 
 import "./Catalog.scss";
 

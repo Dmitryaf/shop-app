@@ -12,9 +12,9 @@ function CardBank() {
   const cardType = useSelector((state) => state.dataReducer.cardType);
 
   const [cardData, setCardData] = useState({
-    holder: "Name Lastname",
-    number: "0000 0000 0000 0000",
-    validity: "00/00",
+    holder: "",
+    number: "",
+    validity: "",
   });
 
   const {
@@ -75,7 +75,7 @@ function CardBank() {
           <div className="card-bank__bottom">
             <div className="card-bank__data">
               <div className="card-bank__data-label">Card Holder</div>
-              <div className="card-bank__data-value">{cardData.holder}</div>
+              <div className="card-bank__data-value">{cardData.holder || "Name Lastname"}</div>
             </div>
             <div className="card-bank__data">
               {brandLogoOriginalSvg ? (

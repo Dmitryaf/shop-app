@@ -1,21 +1,13 @@
-import React, { useEffect } from "react";
-import { useDispatch, useSelector } from "react-redux";
+import React from "react";
+import { useSelector } from "react-redux";
 import { NavLink } from "react-router-dom";
 
 import Product from "../../components/Product/Product";
-import Preloader from "../../components/common/Preloader/Preloader";
-import { getApiData } from "../../api/api";
 
 import "./Catalog.scss";
 
 function Catalog() {
-  const dispatch = useDispatch();
   const data = useSelector((state) => state.dataReducer.data);
-  const isFetching = useSelector((state) => state.dataReducer.isFetching);
-
-  useEffect(() => {
-    dispatch(getApiData());
-  }, [dispatch]);
 
   return (
     <div className="catalog">
@@ -26,11 +18,10 @@ function Catalog() {
         </NavLink>
       </div>
 
-      {isFetching && <Preloader />}
       {data.length > 0 ? (
         <div className="catalog__content">
           {data.map((item) => {
-            return <Product key={item.gameID} data={item} />;
+            return <Product key={item.id} data={item} />;
           })}
         </div>
       ) : (

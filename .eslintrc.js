@@ -20,6 +20,7 @@ module.exports = {
   rules: {
     "linebreak-style": "off",
     "react/prop-types": "off",
+    "no-param-reassign": "off",
     "prettier/prettier": [
       "error",
       {

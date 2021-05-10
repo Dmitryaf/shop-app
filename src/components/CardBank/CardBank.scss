@@ -27,7 +27,7 @@
     padding: 10px 20px;
 
     @media (max-width: 600px) {
-      width: 310px;
+      width: 250px;
       height: 200px;
       padding: 10px;
     }
@@ -52,7 +52,7 @@
     font-size: 1.875rem;
 
     @media (max-width: 600px) {
-      font-size: 1.4rem;
+      font-size: 1.5rem;
     }
   }
 
@@ -62,13 +62,20 @@
     padding: 10px;
 
     @media (max-width: 600px) {
-      height: 55px;
+      height: 50px;
       padding: 5px;
     }
   }
 
   &__brand-empty {
     font-size: 1.3rem;
+    height: 70px;
+    padding: 10px;
+
+    @media (max-width: 600px) {
+      height: 50px;
+      padding: 5px;
+    }
   }
 
   &__number {
@@ -106,7 +113,7 @@
   }
 
   &__fields {
-    margin-bottom: 50px;
+    margin-bottom: 30px;
   }
 
   &__field {
@@ -146,7 +153,6 @@
   &__secure {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 30px;
   }
 
   &__secure-text {

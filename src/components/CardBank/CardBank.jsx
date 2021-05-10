@@ -59,7 +59,7 @@ function CardBank() {
   }, [dispatch]);
 
   return (
-    <form className="card-bank">
+    <div className="card-bank">
       <div
         className="card-bank__front"
         style={{ backgroundColor: bankColor, color: formTextColor }}
@@ -142,7 +142,7 @@ function CardBank() {
           </div>
         </div>
       </div>
-    </form>
+    </div>
   );
 }
 

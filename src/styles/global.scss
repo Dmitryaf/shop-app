@@ -18,7 +18,7 @@ html {
   width: 100%;
   max-width: 1200px;
   padding: 0 20px;
-  margin: 200px auto;
+  margin: 140px auto;
 }
 
 .title {
@@ -51,22 +51,23 @@ html {
     background-color: darken($green, 10);
   }
 
+  &_red {
+    background-color: $red;
+    border-bottom: 2px solid darken($red, 10);
+
+    &:hover,
+    &:active {
+      background-color: darken($red, 10);
+    }
+  }
+
   &_disabled {
-    opacity: 0.5;
-    cursor: auto;
+    opacity: 0.6;
     pointer-events: none;
   }
 
-  &_center {
-    margin: 0 auto;
-  }
-
-  &_w100 {
-    width: 100%;
-  }
-
   &_lg {
-    min-width: 300px;
+    min-width: 180px;
   }
 }
 

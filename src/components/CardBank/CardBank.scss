@@ -1,0 +1,159 @@
+@import '../../styles/variables';
+
+.card-bank {
+  position: relative;
+  border-radius: 4px;
+  background-color: $white;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 230px 40px 40px;
+  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
+
+  @media (max-width: 600px) {
+    padding: 150px 15px 15px;
+  }
+
+  &__front {
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -100%);
+    background-color: $blueDark;
+    color: $white;
+    border-radius: 20px;
+    width: 500px;
+    height: 245px;
+    padding: 10px 20px;
+
+    @media (max-width: 600px) {
+      width: 310px;
+      height: 200px;
+      padding: 10px;
+    }
+  }
+
+  &__logo,
+  &__logo-empty {
+    display: block;
+    width: 100%;
+    height: 70px;
+    padding: 10px;
+    margin-bottom: 20px;
+    object-fit: contain;
+
+    @media (max-width: 600px) {
+      height: 55px;
+      padding: 10px;
+    }
+  }
+
+  &__logo-empty {
+    font-size: 1.875rem;
+
+    @media (max-width: 600px) {
+      font-size: 1.4rem;
+    }
+  }
+
+  &__brand {
+    display: block;
+    height: 70px;
+    padding: 10px;
+
+    @media (max-width: 600px) {
+      height: 55px;
+      padding: 5px;
+    }
+  }
+
+  &__brand-empty {
+    font-size: 1.3rem;
+  }
+
+  &__number {
+    font-size: 1.5rem;
+    text-align: center;
+    margin-bottom: 40px;
+
+    @media (max-width: 600px) {
+      font-size: 1.2rem;
+      margin-bottom: 20px;
+    }
+  }
+
+  &__bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__data-label {
+    margin-bottom: 10px;
+
+    @media (max-width: 600px) {
+      font-size: 0.875rem;
+    }
+  }
+
+  &__data-value {
+    font-weight: 500;
+    text-transform: uppercase;
+
+    @media (max-width: 600px) {
+      font-size: 0.875rem;
+    }
+  }
+
+  &__fields {
+    margin-bottom: 50px;
+  }
+
+  &__field {
+    margin-bottom: 20px;
+  }
+
+  &__label,
+  &__secure-label {
+    display: flex;
+    flex-direction: column;
+
+  }
+
+  &__label-text,
+  &__secure-text {
+    display: inline-block;
+    margin-bottom: 10px;
+    padding-left: 10px;
+  }
+
+  &__input,
+  &__secure-input {
+    font-family: Roboto, sans-serif;
+    font-size: 1rem;
+    border: none;
+    border: 1px solid $blueDark;
+    border-radius: 4px;
+    padding: 10px;
+    outline: none;
+    transition: .3s;
+
+    &:focus {
+      border-color: $purple;
+    }
+  }
+
+  &__secure {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+  }
+
+  &__secure-text {
+    padding: 0;
+  }
+
+  &__secure-input {
+    max-width: 100px;
+  }
+}

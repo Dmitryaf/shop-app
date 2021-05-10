@@ -1,3 +1,5 @@
+@import '../../styles/variables';
+
 .cart {
   &__link {
     text-align: right;
@@ -5,6 +7,44 @@
   }
 
   &__bank {
-    margin-top: 200px;
+    margin: 200px 0 50px;
+
+    @media (max-width: 600px) {
+      margin: 150px 0 30px;
+    }
   }
+
+  &__list {
+    border-radius: 4px;
+    background-color: $white;
+    width: 100%;
+    margin: 0 auto;
+    padding: 30px;
+    box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
+  }
+
+  &__list-empty {
+    font-size: 1.25rem;
+    font-weight: 500;
+    text-align: center;
+  }
+
+  &__total {
+    @media(max-width: 400px) {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 30px;
+
+    @media(max-width: 400px) {
+      flex-direction: column;
+    }
+  }
+
+
 }
